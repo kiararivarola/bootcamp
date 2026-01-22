@@ -2,6 +2,9 @@ Imagen en Docker
 
 <img width="1352" height="328" alt="image" src="https://github.com/user-attachments/assets/0ba4c651-6ba7-47ba-bf71-6da41db57337" />
 
+<img width="1888" height="733" alt="image" src="https://github.com/user-attachments/assets/f8e543c5-465a-46d2-90fc-55c6dd24fa03" />
+
+
 GET 
 
 <img width="1906" height="985" alt="image" src="https://github.com/user-attachments/assets/adaf6830-0435-4d0e-8ffe-2b33ddbebbe8" />
@@ -33,6 +36,7 @@ DELETE
 <img width="1767" height="684" alt="image" src="https://github.com/user-attachments/assets/2b7ffdbf-c1d1-4806-bc3c-9bb6fa70949e" />
 
 <img width="1356" height="269" alt="image" src="https://github.com/user-attachments/assets/ab434de2-c0ba-44e6-965a-dd881f571680" />
+
 
 
 
