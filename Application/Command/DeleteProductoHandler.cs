@@ -1,0 +1,34 @@
+﻿using BootcampCLT.Application.Command;
+using BootcampCLT.Infraestructure.Context;
+using MediatR;
+using Microsoft.EntityFrameworkCore;
+
+namespace BootcampCLT.Application.Command
+{
+    public class DeleteProductoHandler
+        : IRequestHandler<DeleteProductoCommand, bool>
+    {
+        private readonly PostegresDbContext _postgresDbContext;
+
+        public DeleteProductoHandler(PostegresDbContext postgresDbContext)
+        {
+            _postgresDbContext = postgresDbContext;
+        }
+
+        public async Task<bool> Handle(
+            DeleteProductoCommand request,
+            CancellationToken cancellationToken)
+        {
+            var entity = await _postgresDbContext.Productos
+                .FirstOrDefaultAsync(p => p.Id == request.Id, cancellationToken);
+
+            if (entity is null)
+                return false;
+
+            _postgresDbContext.Productos.Remove(entity);
+            await _postgresDbContext.SaveChangesAsync(cancellationToken);
+
+            return true;
+        }
+    }
+}
